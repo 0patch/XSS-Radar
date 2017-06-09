@@ -31,7 +31,7 @@ class Scanner {
     console.log(payloadsToTest);
     // add script to intercept alert
     var actualCode = '(' + function() {
-      falert =  function(payload) {
+      window.alert =  function(payload) {
         console.log('Yay! alert registered for payload ' + payload);
       }
     } + ')();';
